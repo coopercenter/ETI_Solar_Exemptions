@@ -1,0 +1,1 @@
+"ETI Solar Exemptions Table" 
