@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Table V01</title>
+	<title>ETI Solar Exemption</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="images/icons/favicon2.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
@@ -22,7 +22,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	<h1 class="main-header">Virginia Solar Energy Equipment and Facilities Property Tax Exemptions by Locality, 2019</h1>
+	<h1 class="main-header">Virginia Solar Energy Equipment and Facilities Property Tax Exemptions by Locality</h1>
 	
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Locality..." title="Type in Locality">
 	
@@ -33,25 +33,18 @@
 					<table id="data-table">
 						<thead>
 							<tr class="table100-head">
-								<th class="column1">Locality</th>
-								<th class="column2">Full/Partial Exemption</th>
+								<th class="column1" onclick="onColumnHeaderClicked(event)">Locality</th>
+								<th class="column2" onclick="onColumnHeaderClicked(event)">Full/Partial Exemption</th>
 								<th class="column3">Policy Details</th>
 								<th class="column4">Link to Exemption Information</th>
 								<th class="column5">Budget Impact Analysis</th>
 								<th class="column6">Other Relevant Links</th>
-								<!-- <th class="column2">Environmental Restoration Sites</th>
-								<th class="column3">Recycling Equipment and Facilities</th>
-								<th class="column4">Solar Energy Equipment and Facilities</th>
-								<th class="column5">Generating Equipment for Energy Conservation</th>
-								<th class="column6">Certified Stormwater Developments</th>
-								<th class="column7">Wetlands and Riparian Buffers</th>
-								<th class="column8">Links to Information</th> -->
 							</tr>
 						</thead>
 						<tbody>
 								<tr>
 									<td class="column1">Alexandria</td>
-									<th class="column2">Full</th>
+									<td class="column2">Full</th>
 									<td class="column3">The property tax exemption is equal to 100% of cost and installation and is deducted from the value of the property every year for 5 (five) years.</td>
 									<td class="column4"><a href="https://www.alexandriava.gov/uploadedFiles/code/info/Solar%20Energy%20Equipment%20Tax%20Exemption%20Forms%2004.11.pdf">alexandria.gov</a></td>
 									<td class="column5">N/A</td>
@@ -59,7 +52,7 @@
 								</tr>
 								<tr>
 									<td class="column1">Charlottesville</td>
-									<th class="column2">Full</th>
+									<td class="column2">Full</th>
 									<td class="column3">The amount credited will be calculated by applying the current tax rate to the amount of the purchase and installation costs of the certified solar energy equipment, facilities or devices.</td>
 									<td class="column4"><a href="https://www.charlottesville.gov/Faq.aspx?QID=317">charlottesville.gov</a></td>
 									<td class="column5">N/A</td>
@@ -67,7 +60,7 @@
 								</tr>
 								<tr>
 									<td class="column1">Fredericksburg</td>
-									<th class="column2">Full</th>
+									<td class="column2">Full</th>
 									<td class="column3">Upon receipt of an approved and certified application, the Commissioner of Revenue shall determine the value of the equipment as provided in Code of Virginia § 58.1-3661D and E</td>
 									<td class="column4"><a href="https://fredericksburgva.gov/AgendaCenter/ViewFile/Item/5673?fileID=3852">fredericksburg.gov (Pages 4 and 5)</a></td>
 									<td class="column5"><a href="https://fredericksburgva.gov/AgendaCenter/ViewFile/Item/5673?fileID=3852">Pages 2 and 3</a></td>
@@ -75,7 +68,7 @@
 								</tr>
 								<tr>
 									<td class="column1">Hampton</td>
-									<th class="column2">Full</th>
+									<td class="column2">Full</th>
 									<td class="column3">The amount of the exemption provided for by this division shall be determined by applying the local tax rate to the value of the certified solar energy equipment, facilities or devices and subtracting one hundred (100) percent of such amount from the total real estate property tax due on the real property to which such equipment, facilities or devices are attached.</td>
 									<td class="column4"><a href="https://library.municode.com/va/hampton/codes/code_of_ordinances?nodeId=CO_CH37TA_ARTIIREESTA_DIV3EXPRUTSOENEQFADE">Municipal Code</a></td>
 									<td class="column5">N/A</td>
@@ -83,118 +76,92 @@
 								</tr>
 								<tr>
 									<td class="column1">Harrisonburg</td>
-									<th class="column2">Full</th>
+									<td class="column2">Full</th>
 									<td class="column3">100% of assessed value for first 20 years of useful life</td>
 									<td class="column4"><a href="https://library.municode.com/va/harrisonburg/codes/code_of_ordinances?nodeId=PTIITHCOGEOR_TIT4FITAPR_CH2RETA_ARTBREESTAEX_DIV1GE_S4-2-31EXPRUSCESOEQFADE">Municipal Code</a></td>
 									<td class="column5">N/A</td>
 									<td class="column6">N/A</td>
 								</tr>
-
-								<!-- <tr>
-									<td class="column1">2017-09-28 05:57</td>
-									<td class="column2">200397</td>
-									<td class="column3">Samsung S8 Black</td>
-									<td class="column4">$756.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$756.00</td>
+								<tr>
+									<td class="column1">Albemarle</td>
+									<td class="column2">Full</th>
+									<td class="column3">This class of property is exempt from local taxation</td>
+									<td class="column4"><a href="https://library.municode.com/va/albemarle_county/codes/code_of_ordinances?nodeId=CH15TA_ART13PREXTA_DIV2CESOENEQFADECEREEQFADE_S15-1303TAEXCESOENEQCEREEQ">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-26 05:57</td>
-									<td class="column2">200396</td>
-									<td class="column3">Game Console Controller</td>
-									<td class="column4">$22.00</td>
-									<td class="column5">2</td>
-									<td class="column6">$44.00</td>
+									<td class="column1">Chesterfield</td>
+									<td class="column2">Full</th>
+									<td class="column3">Upon receipt of a certified application from the building official, the county assessor shall determine the value of such qualifying solar energy equipment, facility or device. The exemption provided by this article shall be determined by applying the county tax rate to the value of such equipment, facility or device and subtracting that amount from the total real estate tax due on the real property to which such equipment, facility or device is attached.</td>
+									<td class="column4"><a href="https://library.municode.com/va/chesterfield_county/codes/code_of_ordinances?nodeId=PTIITHCO_CH9FITA_ARTIVREESTAPEPRTAEXCESOENEQFADE_S9-84DEEX">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-25 23:06</td>
-									<td class="column2">200392</td>
-									<td class="column3">USB 3.0 Cable</td>
-									<td class="column4">$10.00</td>
-									<td class="column5">3</td>
-									<td class="column6">$30.00</td>
+									<td class="column1">Fairfax</td>
+									<td class="column2">Full</th>
+									<td class="column3">5 year exemption of $1.09 per $100 value of solar value.</td>
+									<td class="column4"><a href="https://www.fairfaxcounty.gov/taxes/relief/real-estate-solar-equipment">fairfaxcounty.gov</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-24 05:57</td>
-									<td class="column2">200391</td>
-									<td class="column3">Smartwatch 4.0 LTE Wifi</td>
-									<td class="column4">$199.00</td>
-									<td class="column5">6</td>
-									<td class="column6">$1494.00</td>
+									<td class="column1">Fauquier</td>
+									<td class="column2">Full</th>
+									<td class="column3">The exemption provided for by this article shall be administered by the commissioner of revenue and shall be determined by applying the local tax rate to the value of the certified solar energy equipment, facilities or devices and subtracting one hundred (100) percent of such amount from the total real estate property tax due on the real property to which such qualifying solar energy equipment are attached.</td>
+									<td class="column4"><a href="https://library.municode.com/va/fauquier_county/codes/code_of_ordinances?nodeId=COOR_CH8FITA_ARTXVIPREXTA_S8-72CESOENEQEX">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-23 05:57</td>
-									<td class="column2">200390</td>
-									<td class="column3">Camera C430W 4k</td>
-									<td class="column4">$699.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$699.00</td>
+									<td class="column1">Hanover</td>
+									<td class="column2">Partial</th>
+									<td class="column3">The exemption provided by this section shall be determined by applying the local tax rate to the value of such equipment, facilities or devices and subtracting one-half of such amount either: (1)From the total real property tax due on the real property to which such equipment, facilities, or devices are attached, or (2)If such equipment, facilities, or devices are taxable as machinery and tools under § 58.1-3507</td>
+									<td class="column4"><a href="https://library.municode.com/va/hanover_county/codes/code_of_ordinances?nodeId=COCO_CH22TA_ARTIIREESTA_DIV4EXSOENEQ">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-22 05:57</td>
-									<td class="column2">200389</td>
-									<td class="column3">Macbook Pro Retina 2017</td>
-									<td class="column4">$2199.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$2199.00</td>
+									<td class="column1">Isle of Wight</td>
+									<td class="column2">Full</th>
+									<td class="column3">Certified pollution control equipment and facilities, as defined herein, are hereby declared to be a separate class of property and shall constitute a classification for local taxation separate from other such classification of real or personal property and such property shall be exempt from local taxation.</td>
+									<td class="column4"><a href="https://library.municode.com/va/isle_of_wight_county/codes/code_of_ordinances?nodeId=CH15TA_ARTIIPEPRTA_S15-23CEPOCOEQEXTA">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-21 05:57</td>
-									<td class="column2">200388</td>
-									<td class="column3">Game Console Controller</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
+									<td class="column1">Loudoun</td>
+									<td class="column2">Full</th>
+									<td class="column3">100% exemption for 10 years</td>
+									<td class="column4"><a href="https://www.loudoun.gov/4041/Exemption-for-Certified-Solar-Energy">loudoun.gov</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-19 05:57</td>
-									<td class="column2">200387</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
+									<td class="column1">Prince William</td>
+									<td class="column2">Full</th>
+									<td class="column3">100% of solar installation value, applied for 5 years/td>
+									<td class="column4"><a href="https://www.pwcgov.org/government/dept/development/bd/Documents/14231.pdf">pwcgov.org</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6"><a href="https://www.pwcgov.org/government/dept/development/bd/Documents/14232.pdf">Building Development Policy</a></td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-18 05:57</td>
-									<td class="column2">200386</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
+									<td class="column1">Pulaski</td>
+									<td class="column2">Full</th>
+									<td class="column3">Pursuant to the authority granted to it by Code of Virginia, § 58.1-3661, the council exempts from local taxation as real or personal property 50 percent of the value of certified solar energy equipment</td>
+									<td class="column4"><a href="https://library.municode.com/va/pulaski/codes/code_of_ordinances?nodeId=PTIICOOR_CH78TA_ARTIINGE_S78-2SOENREEQ">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-22 05:57</td>
-									<td class="column2">200389</td>
-									<td class="column3">Macbook Pro Retina 2017</td>
-									<td class="column4">$2199.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$2199.00</td>
+									<td class="column1">Spotsylvania</td>
+									<td class="column2">Full</th>
+									<td class="column3">Certified pollution control equipment and facilities, as defined by section 58.1-3660 of the Code of Virginia, shall constitute a separate class of property, separate from other classifications of real or personal property, and are hereby exempted from county taxes on real property and tangible personal property.</td>
+									<td class="column4"><a href="https://library.municode.com/va/spotsylvania_county/codes/code_of_ordinances?nodeId=COCO_CH21TA_ARTIINGE_DIV1GE_S21-3RE">Municipal Code</a></td>
+									<td class="column5">N/A</td>
+									<td class="column6">N/A</td>
 								</tr>
-								<tr>
-									<td class="column1">2017-09-21 05:57</td>
-									<td class="column2">200388</td>
-									<td class="column3">Game Console Controller</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-19 05:57</td>
-									<td class="column2">200387</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr>
-								<tr>
-									<td class="column1">2017-09-18 05:57</td>
-									<td class="column2">200386</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
-								</tr> -->
-								
 						</tbody>
 					</table>
 				</div>
@@ -206,12 +173,12 @@
 	
 
 <!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 </body>
