@@ -103,7 +103,8 @@ button:hover {
 
 .main-header {
   text-align: center;
-  padding-top: 20px;
+  /* padding-top: 20px; */
+  padding: 20px 20px 0;
   font-family: OpenSans-Regular;
   font-weight: 500;
 }
@@ -258,10 +259,59 @@ tbody tr:hover {
   width: 250px;
   font-size: 16px;
   padding: 5px 10px;
-  margin-bottom: 12px;
-  margin: 40px 0 0 30px;
+  /* margin: 40px 0 12px 30px; */
+  margin-left: 33px;
   border: 1px solid black;
+  border-radius: 10px;
 }
+
+.above-table{
+  /* display: flex; */
+  /* align-content: center; */
+  /* border: 10px solid red; */
+  position: relative;
+  line-height: 2rem;
+  margin-top: 20px;
+}
+.dropdown{
+  /* position: relative; */
+  right: auto; 
+  float: right;
+  /* margin-top: -44px; */
+  margin-right: 33px;
+  /* display: inline;  */
+  /* margin: 40px 0 12px 30px; */
+
+}
+
+.dropdown-menu{
+  width: 250px;
+}
+.dropdown-menu li{
+  line-height: 20px;
+}
+/* .dropdown-menu.show{
+  transform: translate(-100px, 50px);
+} */
+/* .show{
+  transform: translate(-101px, 50px);
+} */
+
+#mySearchInput{
+  padding-left: 5px;
+  margin: 5px 0 15px 15px;
+  border: black solid 1px;
+  border-radius: 5px;
+}
+
+input{
+  display: inline-block;
+}
+
+.form-check-input{
+  margin-top: .15rem;
+}
+
 
 @media screen and (max-width: 992px) {
   table {
