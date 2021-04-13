@@ -17,7 +17,6 @@ function myFunction() {
         td = tr[i].getElementsByTagName("td")[0];
         if (td) {
             txtValue = td.title
-            //txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
@@ -31,9 +30,7 @@ function mySearchFunction(){
     var input = document.getElementById("mySearchInput");
     var filter = input.value.toUpperCase();
     var search_bar = document.getElementById("select_locality");
-    console.log(input, filter, search_bar);
     var li = search_bar.getElementsByTagName("li");
-    console.log(li)
 
     for (i = 0; i < li.length; i++){
         var textValue = li[i].innerText
@@ -50,7 +47,6 @@ function mySearchFunction(){
 function eventListenerCheckboxes(){
     var list = document.getElementById("select_locality");
     var checked = list.getElementsByClassName("form-check-input");
-    //var boxes = checked.getElementsByTagName("input")
     for(i = 0; i < checked.length; i++){
         checked[i].addEventListener('click', updateTable);
     }
@@ -61,8 +57,10 @@ function updateTable(){
     var list = document.getElementById("select_locality");
     var checkedList = list.getElementsByClassName("form-check-input");
     var tr = document.getElementById("data-table").getElementsByTagName("tr");
+    var deselect_button = document.getElementById("deselect_checkboxes");
     var checkedLocalities = new Set();
     var numChecked = 0;
+    
 
     for(i = 0; i < checkedList.length; i++){
         if(checkedList[i].checked){
@@ -74,9 +72,6 @@ function updateTable(){
         for( i = 0; i < tr.length; i++){
             var td = tr[i].getElementsByTagName("td")[0]
             if (td){
-                console.log(td.innerText)
-                console.log(checkedLocalities)
-                console.log(checkedLocalities.has(td.innerText))
                 if(checkedLocalities.has(td.innerText)){
                     tr[i].style.display = "";
                 }
@@ -85,21 +80,29 @@ function updateTable(){
                 }
             }
         }
+        deselect_button.style.display = "inline";
     }
     if (numChecked == 0){
         for( i = 0; i < tr.length; i++){
             tr[i].style.display = "";
         }
+        deselect_button.style.display = "none";
     }
+
 }
 
 function clearCheckboxes(){
     var list = document.getElementById("select_locality");
     var checkedList = list.getElementsByClassName("form-check-input");
+    var tr = document.getElementById("data-table").getElementsByTagName("tr");
+    var deselect_button = document.getElementById("deselect_checkboxes");
 
     for(i = 0; i < checkedList.length; i++){
         checkedList[i].checked = false;
+        tr[i].style.display = "";
     }
+
+    deselect_button.style.display = "none";
 }
 
 function clearSearch(){
