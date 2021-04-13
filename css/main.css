@@ -182,9 +182,9 @@ table td.r, table th.r {
   font-weight: unset;
 }
 
-tbody tr:nth-child(even) {
+/* tbody tr:nth-child(even) {
   background-color: #f5f5f5;
-}
+} */
 
 tbody tr {
   font-family: OpenSans-Regular;
@@ -196,8 +196,24 @@ tbody tr {
 
 tbody tr:hover {
   color: black;
-  background-color: #d4d4d4;
+  /* background-color: #d4d4d4; */
   cursor: pointer;
+}
+
+.oddtr{
+  background-color: #ffffff;
+}
+
+.oddtr:hover{
+  background-color: #d4d4d4;
+}
+
+.eventr{
+  background-color: #f5f5f5;
+}
+
+.eventr:hover{
+  background-color: #d4d4d4;
 }
 
 .column1 {

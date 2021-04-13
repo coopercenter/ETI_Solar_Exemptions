@@ -62,7 +62,6 @@ function updateTable(){
     var deselect_button = document.getElementById("deselect_checkboxes");
     var checkedLocalities = new Set();
     var numChecked = 0;
-    
 
     for(i = 0; i < checkedList.length; i++){
         if(checkedList[i].checked){
@@ -111,7 +110,6 @@ function clearCheckboxes(){
 function clearSearch(){
     input = document.getElementById("myInput");
     input.value = "";
-    correctColoring();
 }
 
 
@@ -120,8 +118,15 @@ function sortTableRowsByColumn( table, columnIndex, ascending ) {
     const rows = Array.from( table.querySelectorAll( ':scope > tbody > tr' ) );
     rows.sort( ( x, y ) => {
     
-        const xValue = x.cells[columnIndex].title;
-        const yValue = y.cells[columnIndex].title;
+        var xValue = x.cells[columnIndex].title;
+        var yValue = y.cells[columnIndex].title;
+
+        console.log(xValue);
+
+        if(xValue == ""){
+            xValue = x.cells[columnIndex].innerText;
+            yValue = y.cells[columnIndex].innerText;
+        }
         return ascending ? ( xValue.localeCompare(yValue) ) : ( yValue.localeCompare(xValue) );
     } );
     for( let row of rows ) {
@@ -156,6 +161,7 @@ function onColumnHeaderClicked( ev ) {
     else{
         th.innerText = ascending ? columnName + " ∧" : columnName + " ∨";
     }
+    correctColoring();
 }
 
 function correctColoring(){
@@ -166,17 +172,22 @@ function correctColoring(){
             shown_Tr.push(tr[i]);
         }
     }
+    console.log(shown_Tr.length);
     for(i = 0; i < shown_Tr.length; i++){
-        var td = shown_Tr[i].getElementsByTagName("td")[0]
-        if (td){
-            if(i % 2 == 0){
-                shown_Tr[i].style.backgroundColor = "#ffffff";
+        current_tr = shown_Tr[i];
+        var td = current_tr.getElementsByTagName("td")[0]
+        current_tr.classList.remove("oddtr");
+        current_tr.classList.remove("eventr");
+        if (td) {
+            if(i % 2 == 1){
+                current_tr.classList.add("oddtr");
             }
             else{
-                shown_Tr[i].style.backgroundColor = "#f5f5f5";
+                current_tr.classList.add("eventr");
             }
         }
     }
 }
 
 eventListenerCheckboxes();
+correctColoring();
