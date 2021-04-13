@@ -24,6 +24,7 @@ function myFunction() {
             }
         }
     }
+    correctColoring();
 }
 
 function mySearchFunction(){
@@ -42,6 +43,7 @@ function mySearchFunction(){
             }
         }
     }
+    correctColoring();
 }
 
 function eventListenerCheckboxes(){
@@ -88,7 +90,7 @@ function updateTable(){
         }
         deselect_button.style.display = "none";
     }
-
+    correctColoring();
 }
 
 function clearCheckboxes(){
@@ -103,11 +105,13 @@ function clearCheckboxes(){
     }
 
     deselect_button.style.display = "none";
+    correctColoring();
 }
 
 function clearSearch(){
     input = document.getElementById("myInput");
     input.value = "";
+    correctColoring();
 }
 
 
@@ -131,8 +135,6 @@ function onColumnHeaderClicked( ev ) {
     const table = th.closest( 'table' );
     const thIndex = Array.from( th.parentElement.children ).indexOf( th );
 
-    
-
     const ascending = !( 'sort' in th.dataset ) || th.dataset.sort != 'asc';
 
     sortTableRowsByColumn( table, thIndex, ascending );
@@ -153,6 +155,27 @@ function onColumnHeaderClicked( ev ) {
     }
     else{
         th.innerText = ascending ? columnName + " ∧" : columnName + " ∨";
+    }
+}
+
+function correctColoring(){
+    var tr = document.getElementById("data-table").getElementsByTagName("tr");
+    var shown_Tr = [];
+    for(i = 0; i < tr.length; i++){
+        if(tr[i].style.display != "none"){
+            shown_Tr.push(tr[i]);
+        }
+    }
+    for(i = 0; i < shown_Tr.length; i++){
+        var td = shown_Tr[i].getElementsByTagName("td")[0]
+        if (td){
+            if(i % 2 == 0){
+                shown_Tr[i].style.backgroundColor = "#ffffff";
+            }
+            else{
+                shown_Tr[i].style.backgroundColor = "#f5f5f5";
+            }
+        }
     }
 }
 
