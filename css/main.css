@@ -101,12 +101,35 @@ button:hover {
 
 } */
 
+.footer{
+  background-color: #d4d4d4;
+  /* color: rgb(240, 240, 240); */
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 17px;
+  font-family: OpenSans-Regular;
+}
+
+.footer a{
+  text-decoration: none;
+}
+
+.eti-logo{
+  width: 450px;
+}
+
 .main-header {
   text-align: center;
-  /* padding-top: 20px; */
-  padding: 20px 20px 0;
+  padding: 20px 20px 10px;
   font-family: OpenSans-Regular;
   font-weight: 500;
+}
+
+.info-text{
+  text-align: center;
+  padding: 0 33px;
 }
 
 .limiter {
