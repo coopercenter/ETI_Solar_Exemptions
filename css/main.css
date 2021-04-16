@@ -241,13 +241,16 @@ tbody tr:hover {
 
 .column1 {
   width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /* padding-left: 40px; */
 }
 
 .column3 {
   width: 1200px;
   text-align: center;
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
  
 .column2,
@@ -256,6 +259,8 @@ tbody tr:hover {
 .column6{
   width: 200px;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* .column5{
