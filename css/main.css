@@ -122,14 +122,18 @@ button:hover {
 
 .main-header {
   text-align: center;
-  padding: 20px 20px 10px;
+  padding: 20px 10px 10px;
   font-family: OpenSans-Regular;
   font-weight: 500;
+  font-size: 45px;
 }
 
+
 .info-text{
-  text-align: center;
-  padding: 0 33px;
+  text-align: left;
+  padding: 20px 33px 0;
+  text-indent: 20px;
+  line-height: 24px;
 }
 
 .limiter {
