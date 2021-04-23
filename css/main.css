@@ -135,6 +135,9 @@ button:hover {
   text-indent: 20px;
   line-height: 24px;
 }
+.info-p{
+  margin-bottom: 15px;
+}
 
 .limiter {
   width: 100%;
@@ -151,7 +154,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 20px 30px;
+  padding: 20px 30px 40px;
 }
 
 .wrap-table100 {
@@ -381,26 +384,26 @@ input{
     position: absolute;
     width: 40%;
     left: 30px;
-    top: 0;
+    /* top: 0; */
   }
   table tbody tr td:nth-child(1):before {
-    content: "Locality";
+    content: "Locality-City";
   }
   table tbody tr td:nth-child(2):before {
     content: "Full/Partial Exemption";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Policy Details";
-    margin-top: 4%;
+    content: "Policy Summary";
+    /* margin-top: 4%; */
   }
   table tbody tr td:nth-child(4):before {
-    content: "Link to Exemption Information";
+    content: "Link to Ordinance";
   }
   table tbody tr td:nth-child(5):before {
-    content: "Budget Impact Analysis";
+    content: "Other Relevant Links";
   }
   table tbody tr td:nth-child(6):before {
-    content: "Other Relevant Links";
+    content: "Budget Impact - Coming Soon";
   }
   /* table tbody tr td:nth-child(7):before {
     content: "Wetlands and Riparian Buffers";
