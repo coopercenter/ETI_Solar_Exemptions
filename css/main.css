@@ -122,10 +122,12 @@ button:hover {
 
 .main-header {
   text-align: center;
-  padding: 20px 10px 10px;
+  padding: 20px 0 10px;
+  margin: auto;
   font-family: OpenSans-Regular;
   font-weight: 500;
   font-size: 45px;
+  width: 70%;
 }
 
 
@@ -387,7 +389,7 @@ input{
     /* top: 0; */
   }
   table tbody tr td:nth-child(1):before {
-    content: "Locality-City";
+    content: "Locality";
   }
   table tbody tr td:nth-child(2):before {
     content: "Full/Partial Exemption";
